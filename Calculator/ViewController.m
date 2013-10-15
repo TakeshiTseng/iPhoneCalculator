@@ -56,7 +56,7 @@
 	
 	if([buf length] < 10){
 		if(resetFlag){
-			[self setCurrentNumber];
+			prevNumber = currentNumber;
 			[buf setString:text];
 			resetFlag = NO;
 			holdNumber = 0;
@@ -65,7 +65,7 @@
 			[buf appendString:text];
 		}
 	}
-	[self setPreviousNumber];
+	[self setCurrentNumber];
 	[self setBuf];
 }
 
@@ -89,8 +89,6 @@
 }
 - (IBAction)equal:(id)sender{
 	[self calculate];
-
-	prevNumber = 0;
 	[self setBuf];
 }
 - (IBAction)dot:(id)sender{
@@ -117,17 +115,15 @@
 
 }
 - (void)setBuf{
-	[buf setString:[NSString stringWithFormat:@"%g", prevNumber]];
+	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 	[numPane setText:buf];
 }
 - (void)calculate {
 
 	if(addFlag){
-		prevNumber = prevNumber + currentNumber;
-		currentNumber = 0;
+		currentNumber = prevNumber + currentNumber;
 	} else if(minusFlag){
-		prevNumber = prevNumber - currentNumber;
-		currentNumber = 0;
+		currentNumber = prevNumber - currentNumber;
 	}
 	[self clearFlags];
 }
