@@ -86,6 +86,7 @@
 	[numPane setText:buf];
 	resetFlag = YES;
 	addFlag = NO;
+	minusFlag = NO;
 	currentNumber = 0;
 	prevNumber = 0;
 }
@@ -125,6 +126,7 @@
 	} else if(![[numPane text]isEqualToString:@"0"]){
 		[buf insertString:@"-" atIndex:0];
 	}
+	[numPane setText:buf];
 	
 }
 
@@ -133,16 +135,15 @@
 	currentNumber = atof(cbuf);
 	if(minusFlag){
 		currentNumber = prevNumber - currentNumber;
-		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 	} else if(addFlag){
 		currentNumber = prevNumber + currentNumber;
-		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 		addFlag = NO;
 		minusFlag = YES;
 	} else {
 		addFlag = NO;
 		minusFlag = YES;
 	}
+	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 	resetFlag = YES;
 	[numPane setText:buf];
 }
