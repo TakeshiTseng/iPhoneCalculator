@@ -13,10 +13,12 @@
 	IBOutlet UILabel *numPane;
 }
 
-- (IBAction)btnPress:(id)sender;
+- (IBAction)numberButonPress:(id)sender;
 - (IBAction)add:(id)sender;
 - (IBAction)allClear:(id)sender;
 - (IBAction)persent:(id)sender;
 - (IBAction)equal:(id)sender;
+- (IBAction)dot:(id)sender;
+- (IBAction)setNeg:(id)sender;
 
 @end

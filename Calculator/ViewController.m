@@ -39,7 +39,7 @@
 }
 
 
-- (IBAction)btnPress:(id)sender {
+- (IBAction)numberButonPress:(id)sender {
 	UIButton* btn = (UIButton*) sender;
 	NSLog(@"%@", [btn currentTitle]);
 	NSString* text = [btn currentTitle];
@@ -53,17 +53,6 @@
 			resetFlag = NO;
 		} else {
 			[buf appendString:text];
-			
-		}
-	} else if([text isEqualToString:@"."] && ![MathUtil isRealNum:buf] && [buf length] < 10){
-		[buf appendString:@"."];
-		resetFlag = NO;
-		
-	} else if([text isEqualToString:@"±"]){
-		if([MathUtil isNagtive:buf]){
-			buf = [NSMutableString stringWithString:[buf substringFromIndex:1]];
-		} else if(![[numPane text]isEqualToString:@"0"]){
-			[buf insertString:@"-" atIndex:0];
 		}
 	}
 	
@@ -77,7 +66,7 @@
 	currentNumber = atof(cbuf);
 	if(addFlag){
 		currentNumber += prevNumber;
-		[buf setString:[NSString stringWithFormat:@"%f", currentNumber]];
+		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 	} else {
 		addFlag = YES;
 		
@@ -99,7 +88,7 @@
 	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
 	currentNumber = atof(cbuf);
 	currentNumber /= 100;
-	buf = [NSMutableString stringWithFormat:@"%f", currentNumber];
+	buf = [NSMutableString stringWithFormat:@"%g", currentNumber];
 	[numPane setText:buf];
 }
 - (IBAction)equal:(id)sender{
@@ -108,9 +97,26 @@
 		[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
 		currentNumber = atof(cbuf);
 		currentNumber += prevNumber;
-		[buf setString:[NSString stringWithFormat:@"%f", currentNumber]];
+		prevNumber = 0;
+		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 		resetFlag = YES;
 		[numPane setText:buf];
 	}
+}
+- (IBAction)dot:(id)sender{
+	if(![MathUtil isRealNum:buf] && [buf length] < 10){
+		[buf appendString:@"."];
+		resetFlag = NO;
+		
+	}
+}
+- (IBAction)setNeg:(id)sender{
+	
+	if([MathUtil isNagtive:buf]){
+		buf = [NSMutableString stringWithString:[buf substringFromIndex:1]];
+	} else if(![[numPane text]isEqualToString:@"0"]){
+		[buf insertString:@"-" atIndex:0];
+	}
+	
 }
 @end
