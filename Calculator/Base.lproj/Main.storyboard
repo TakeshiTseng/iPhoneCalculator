@@ -489,43 +489,7 @@
     </scenes>
     <resources>
         <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
         <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
         <image name="white.png" width="80" height="80"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
