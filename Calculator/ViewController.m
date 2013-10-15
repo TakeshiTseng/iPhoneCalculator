@@ -13,9 +13,11 @@
 	NSMutableString* buf;
 	double currentNumber;
 	double prevNumber;
+	double holdNumber;
 	BOOL resetFlag;
 	BOOL addFlag;
 	BOOL minusFlag;
+	BOOL holdFlag;
 	char cbuf[10];
 }
 
@@ -54,24 +56,20 @@
 	
 	if([buf length] < 10){
 		if(resetFlag){
-			[self setPreviousNumber];
+			[self setCurrentNumber];
 			[buf setString:text];
 			resetFlag = NO;
+			holdNumber = 0;
+			holdFlag = NO;
 		} else {
 			[buf appendString:text];
 		}
 	}
-	[self setCurrentNumber];
+	[self setPreviousNumber];
 	[self setBuf];
 }
 
 
--(IBAction)add:(id)sender{
-	[self calculate];
-
-	addFlag = YES;
-	[self setBuf];
-}
 
 -(IBAction)allClear:(id)sender{
 
@@ -106,24 +104,30 @@
 	currentNumber *= -1;
 	[self setBuf];
 }
+-(IBAction)add:(id)sender{
+	[self calculate];
+	addFlag = YES;
+	[self setBuf];
+}
 
 - (IBAction)minus:(id)sender{
 	[self calculate];
-
 	minusFlag = YES;
-	
 	[self setBuf];
 
 }
 - (void)setBuf{
-	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+	[buf setString:[NSString stringWithFormat:@"%g", prevNumber]];
 	[numPane setText:buf];
 }
 - (void)calculate {
-	if(minusFlag){
-		currentNumber = prevNumber - currentNumber;
-	} else if(addFlag){
-		currentNumber = prevNumber + currentNumber;
+
+	if(addFlag){
+		prevNumber = prevNumber + currentNumber;
+		currentNumber = 0;
+	} else if(minusFlag){
+		prevNumber = prevNumber - currentNumber;
+		currentNumber = 0;
 	}
 	[self clearFlags];
 }
