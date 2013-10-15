@@ -42,9 +42,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="minus:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Imh-ch-dRs"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-o7-4JU">
                                 <rect key="frame" x="517" y="218" width="50" height="50"/>
@@ -53,9 +50,6 @@
                                 <state key="normal" title="+" backgroundImage="orange.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="add:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sdS-ut-LKw"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vC-nn-nh1">
                                 <rect key="frame" x="517" y="269" width="50" height="50"/>
@@ -77,9 +71,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="dot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zW1-Lv-P9s"/>
-                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7R-h7-0Ff">
                                 <rect key="frame" x="20" y="13" width="528" height="39"/>
@@ -97,7 +88,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ohr-61-VSM"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dk2-Gi-cNm"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2C6-Vd-QTC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFd-hY-CCg">
@@ -109,7 +101,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hHy-Kp-Gbm"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nmw-c8-y61"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bha-8r-q26"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcu-vz-v44">
@@ -121,7 +114,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="C3v-eE-FWn"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FxP-Tj-J4y"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p84-xq-m1h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzN-HO-T5n">
@@ -133,7 +127,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2d6-Eh-9gi"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ng3-kG-NDa"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KMY-Tx-0NS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbG-ma-9KB">
@@ -145,7 +140,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K92-eO-we1"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qmq-xj-6gT"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ELH-lh-yJa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ds-OY-PAD">
@@ -157,7 +153,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BN0-Pg-JiB"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hWI-uZ-QSv"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WCd-dE-t53"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sch-Na-lcT">
@@ -169,7 +166,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fzS-CZ-KLM"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PCl-Mk-Xad"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zkS-CH-qoY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuf-x9-94P">
@@ -181,7 +179,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PLY-qk-DsF"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YEu-zK-q8D"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="39T-Y0-eaU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LE-e9-bhw">
@@ -193,7 +192,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Meq-67-OCq"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5Nx-fl-Jzx"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TCV-UI-907"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-fJ-pGS">
@@ -205,7 +205,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QGL-Vl-rRh"/>
+                                    <action selector="numberButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kZ7-sF-IKf"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0wS-RQ-jDQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNV-do-VM7">
@@ -216,9 +217,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="udv-gp-UYR"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA5-Hq-A9f">
                                 <rect key="frame" x="103" y="116" width="50" height="50"/>
@@ -228,9 +226,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nwp-2T-N9o"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCt-7N-uc2">
                                 <rect key="frame" x="52" y="116" width="50" height="50"/>
@@ -240,9 +235,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iwa-v2-m3y"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeC-hf-49w">
                                 <rect key="frame" x="1" y="116" width="50" height="50"/>
@@ -252,9 +244,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qf2-Qo-gfZ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ1-or-Mgy">
                                 <rect key="frame" x="154" y="167" width="50" height="50"/>
@@ -264,9 +253,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MrR-v2-Td0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-dR-LmK">
                                 <rect key="frame" x="103" y="167" width="50" height="50"/>
@@ -276,9 +262,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aVu-hx-qS1"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drG-G9-dwf">
                                 <rect key="frame" x="52" y="167" width="50" height="50"/>
@@ -288,9 +271,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LvY-35-KjB"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5I-VN-gmO">
                                 <rect key="frame" x="1" y="167" width="50" height="50"/>
@@ -300,9 +280,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RxG-Pp-Ebh"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Y6-yY-scp">
                                 <rect key="frame" x="154" y="218" width="50" height="50"/>
@@ -312,9 +289,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cnv-Xs-hLz"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edp-mb-hbV">
                                 <rect key="frame" x="103" y="218" width="50" height="50"/>
@@ -324,9 +298,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pHM-fX-4hI"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-JN-U9K">
                                 <rect key="frame" x="52" y="218" width="50" height="50"/>
@@ -336,9 +307,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sRV-OV-lMk"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiG-4v-DKn">
                                 <rect key="frame" x="1" y="269" width="50" height="50"/>
@@ -348,9 +316,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="o1J-lb-lHz"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyi-Qn-0E6">
                                 <rect key="frame" x="154" y="269" width="50" height="50"/>
@@ -360,9 +325,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ggy-mV-JC8"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjt-PX-cvF">
                                 <rect key="frame" x="103" y="269" width="50" height="50"/>
@@ -372,9 +334,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XGQ-Ax-Y61"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tx-hP-nkw">
                                 <rect key="frame" x="52" y="269" width="50" height="50"/>
@@ -384,9 +343,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Apk-xR-wcl"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPp-8R-KVd">
                                 <rect key="frame" x="1" y="218" width="50" height="50"/>
@@ -396,9 +352,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="numberButonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Bp-HT-NKF"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SH-t2-2On">
                                 <rect key="frame" x="466" y="65" width="50" height="50"/>
@@ -409,7 +362,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="persent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aoa-O4-wHa"/>
+                                    <action selector="persent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t6s-9p-2V8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUz-eu-sQG">
@@ -421,7 +374,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="setNeg:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ekA-qS-Hgp"/>
+                                    <action selector="setNeg:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rnd-9R-dbf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV2-bW-dmw">
@@ -433,7 +386,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="allClear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="09R-56-qxy"/>
+                                    <action selector="allClear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="k1l-tD-Zw6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVQ-wU-knW">

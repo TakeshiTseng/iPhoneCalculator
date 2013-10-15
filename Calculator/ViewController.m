@@ -11,14 +11,7 @@
 
 @interface ViewController (){
 	NSMutableString* buf;
-	double currentNumber;
-	double prevNumber;
-	double holdNumber;
-	BOOL resetFlag;
-	BOOL addFlag;
-	BOOL minusFlag;
-	BOOL holdFlag;
-	char cbuf[10];
+
 }
 
 @end
@@ -29,11 +22,7 @@
 {
     [super viewDidLoad];
 	buf = [NSMutableString stringWithString:@"0"];
-	currentNumber = 0;
-	prevNumber = 0;
-	resetFlag = YES;
-	addFlag = NO;
-	minusFlag = NO;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,11 +31,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)numberButtonPress:(id)sender{
+	NSString* numText = [sender title];
+	[buf appendString:numText];
 	
 }
-
-
-
+- (IBAction)allClear:(id)sende{
+	
+}
+- (IBAction)setNeg:(id)sender{
+	
+}
+- (IBAction)equal:(id)sender{
+	
+}
+- (IBAction)persent:(id)sender{
+	
+}
+- (IBAction)updateNumLabel:(id)sender{
+	[numPane setText:buf];
+}
 
 @end

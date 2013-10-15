@@ -14,5 +14,9 @@
 }
 
 - (IBAction)numberButtonPress:(id)sender;
-
+- (IBAction)equal:(id)sender;
+- (IBAction)setNeg:(id)sender;
+- (IBAction)allClear:(id)sender;
+- (IBAction)persent:(id)sender;
+- (IBAction)updateNumLabel:(id)sender;
 @end
