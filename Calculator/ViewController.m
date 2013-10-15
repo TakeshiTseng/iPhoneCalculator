@@ -15,6 +15,7 @@
 	double prevNumber;
 	BOOL resetFlag;
 	BOOL addFlag;
+	BOOL minusFlag;
 	char cbuf[10];
 }
 
@@ -30,6 +31,7 @@
 	prevNumber = 0;
 	resetFlag = YES;
 	addFlag = NO;
+	minusFlag = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +71,7 @@
 		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 	} else {
 		addFlag = YES;
+		minusFlag = NO;
 		
 	}
 	resetFlag = YES;
@@ -101,6 +104,15 @@
 		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 		resetFlag = YES;
 		[numPane setText:buf];
+	} else if(minusFlag){
+		minusFlag = NO;
+		[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
+		currentNumber = atof(cbuf);
+		currentNumber -= prevNumber;
+		prevNumber = 0;
+		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+		resetFlag = YES;
+		[numPane setText:buf];
 	}
 }
 - (IBAction)dot:(id)sender{
@@ -118,5 +130,19 @@
 		[buf insertString:@"-" atIndex:0];
 	}
 	
+}
+
+- (IBAction)minus:(id)sender{
+	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
+	currentNumber = atof(cbuf);
+	if(minusFlag){
+		currentNumber -= prevNumber;
+		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+	} else {
+		addFlag = NO;
+		minusFlag = YES;
+	}
+	resetFlag = YES;
+	[numPane setText:buf];
 }
 @end

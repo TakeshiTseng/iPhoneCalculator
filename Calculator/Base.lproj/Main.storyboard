@@ -42,6 +42,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="minus:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Imh-ch-dRs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-o7-4JU">
                                 <rect key="frame" x="243" y="413" width="75" height="75"/>
@@ -290,27 +293,6 @@
     </scenes>
     <resources>
         <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
         <image name="orange.png" width="80" height="80"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
