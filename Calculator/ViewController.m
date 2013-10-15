@@ -67,13 +67,16 @@
 	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
 	currentNumber = atof(cbuf);
 	if(addFlag){
-		currentNumber += prevNumber;
-		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+		currentNumber = currentNumber + prevNumber;
+	} else if(minusFlag){
+		currentNumber = prevNumber - currentNumber;
+		addFlag = YES;
+		minusFlag = NO;
 	} else {
 		addFlag = YES;
 		minusFlag = NO;
-		
 	}
+	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
 	resetFlag = YES;
 	[numPane setText:buf];
 	
@@ -95,25 +98,18 @@
 	[numPane setText:buf];
 }
 - (IBAction)equal:(id)sender{
+	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
+	currentNumber = atof(cbuf);
 	if(addFlag){
-		addFlag = NO;
-		[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
-		currentNumber = atof(cbuf);
-		currentNumber += prevNumber;
-		prevNumber = 0;
-		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
-		resetFlag = YES;
-		[numPane setText:buf];
+		currentNumber = currentNumber + prevNumber;
 	} else if(minusFlag){
-		minusFlag = NO;
-		[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
-		currentNumber = atof(cbuf);
-		currentNumber -= prevNumber;
-		prevNumber = 0;
-		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
-		resetFlag = YES;
-		[numPane setText:buf];
+		currentNumber = prevNumber - currentNumber;
 	}
+	
+	resetFlag = YES;
+	prevNumber = 0;
+	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+	[numPane setText:buf];
 }
 - (IBAction)dot:(id)sender{
 	if(![MathUtil isRealNum:buf] && [buf length] < 10){
@@ -136,8 +132,13 @@
 	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
 	currentNumber = atof(cbuf);
 	if(minusFlag){
-		currentNumber -= prevNumber;
+		currentNumber = prevNumber - currentNumber;
 		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+	} else if(addFlag){
+		currentNumber = prevNumber + currentNumber;
+		[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+		addFlag = NO;
+		minusFlag = YES;
 	} else {
 		addFlag = NO;
 		minusFlag = YES;
