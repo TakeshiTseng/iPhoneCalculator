@@ -39,78 +39,61 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
+-(void)setCurrentNumber{
+	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
+	currentNumber = atof(cbuf);
+}
+-(void)setPreviousNumber{
+	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
+	prevNumber = atof(cbuf);
+}
 - (IBAction)numberButonPress:(id)sender {
 	UIButton* btn = (UIButton*) sender;
 	NSLog(@"%@", [btn currentTitle]);
 	NSString* text = [btn currentTitle];
 	
-	if([MathUtil isNum:text] && [buf length] < 10){
+	if([buf length] < 10){
 		if(resetFlag){
-			[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
-			prevNumber = atof(cbuf);
-			
+			[self setPreviousNumber];
 			[buf setString:text];
 			resetFlag = NO;
 		} else {
 			[buf appendString:text];
 		}
 	}
-	
-	[numPane setText:buf];
+	[self setCurrentNumber];
+	[self setBuf];
 }
 
 
 -(IBAction)add:(id)sender{
-	
-	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
-	currentNumber = atof(cbuf);
-	if(addFlag){
-		currentNumber = currentNumber + prevNumber;
-	} else if(minusFlag){
-		currentNumber = prevNumber - currentNumber;
-		addFlag = YES;
-		minusFlag = NO;
-	} else {
-		addFlag = YES;
-		minusFlag = NO;
-	}
-	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
-	resetFlag = YES;
-	[numPane setText:buf];
-	
+	[self calculate];
+
+	addFlag = YES;
+	[self setBuf];
 }
+
 -(IBAction)allClear:(id)sender{
-	[buf setString:@"0"];
-	[numPane setText:buf];
+
 	resetFlag = YES;
 	addFlag = NO;
 	minusFlag = NO;
 	currentNumber = 0;
 	prevNumber = 0;
+	
+	[self setBuf];
 }
 
 - (IBAction)persent:(id)sender{
-	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
-	currentNumber = atof(cbuf);
 	currentNumber /= 100;
-	buf = [NSMutableString stringWithFormat:@"%g", currentNumber];
-	[numPane setText:buf];
+	[self clearFlags];
+	[self setBuf];
 }
 - (IBAction)equal:(id)sender{
-	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
-	currentNumber = atof(cbuf);
-	if(addFlag){
-		currentNumber = currentNumber + prevNumber;
-	} else if(minusFlag){
-		currentNumber = prevNumber - currentNumber;
-	}
-	
-	resetFlag = YES;
+	[self calculate];
+
 	prevNumber = 0;
-	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
-	[numPane setText:buf];
+	[self setBuf];
 }
 - (IBAction)dot:(id)sender{
 	if(![MathUtil isRealNum:buf] && [buf length] < 10){
@@ -120,31 +103,34 @@
 	}
 }
 - (IBAction)setNeg:(id)sender{
-	
-	if([MathUtil isNagtive:buf]){
-		buf = [NSMutableString stringWithString:[buf substringFromIndex:1]];
-	} else if(![[numPane text]isEqualToString:@"0"]){
-		[buf insertString:@"-" atIndex:0];
-	}
-	[numPane setText:buf];
-	
+	currentNumber *= -1;
+	[self setBuf];
 }
 
 - (IBAction)minus:(id)sender{
-	[buf getCString:cbuf maxLength:10 encoding:NSUTF8StringEncoding];
-	currentNumber = atof(cbuf);
+	[self calculate];
+
+	minusFlag = YES;
+	
+	[self setBuf];
+
+}
+- (void)setBuf{
+	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+	[numPane setText:buf];
+}
+- (void)calculate {
 	if(minusFlag){
 		currentNumber = prevNumber - currentNumber;
 	} else if(addFlag){
 		currentNumber = prevNumber + currentNumber;
-		addFlag = NO;
-		minusFlag = YES;
-	} else {
-		addFlag = NO;
-		minusFlag = YES;
 	}
-	[buf setString:[NSString stringWithFormat:@"%g", currentNumber]];
+	[self clearFlags];
+}
+
+-(void)clearFlags{
+	addFlag = NO;
+	minusFlag = NO;
 	resetFlag = YES;
-	[numPane setText:buf];
 }
 @end

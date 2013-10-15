@@ -21,4 +21,5 @@
 - (IBAction)dot:(id)sender;
 - (IBAction)setNeg:(id)sender;
 - (IBAction)minus:(id)sender;
+- (void)clearFlags;
 @end
