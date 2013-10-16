@@ -21,10 +21,7 @@
 		04093F8818029EFD007ECC71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04093F6A18029EFD007ECC71 /* UIKit.framework */; };
 		04093F9018029EFD007ECC71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04093F8E18029EFD007ECC71 /* InfoPlist.strings */; };
 		04093F9218029EFD007ECC71 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04093F9118029EFD007ECC71 /* CalculatorTests.m */; };
-		040F1AD418050A0C00529130 /* gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F1AD218050A0C00529130 /* gray.png */; };
-		040F1AD518050A0C00529130 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F1AD318050A0C00529130 /* orange.png */; };
 		041A3DA9180BD8CB00505924 /* MathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A3DA8180BD8CB00505924 /* MathUtil.m */; };
-		04904586180D9DEA002322FA /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 04904585180D9DEA002322FA /* white.png */; };
 		049045B5180E2EE9002322FA /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04904589180E2EE9002322FA /* _DDFunctionContainer.m */; };
 		049045B6180E2EE9002322FA /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490458B180E2EE9002322FA /* _DDFunctionExpression.m */; };
 		049045B7180E2EE9002322FA /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490458D180E2EE9002322FA /* _DDFunctionTerm.m */; };
@@ -46,6 +43,13 @@
 		049045C7180E2EE9002322FA /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 049045B0180E2EE9002322FA /* DDParserTypes.m */; };
 		049045C8180E2EE9002322FA /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 049045B2180E2EE9002322FA /* DDTypes.m */; };
 		049045C9180E2EE9002322FA /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 049045B4180E2EE9002322FA /* NSString+DDMathParsing.m */; };
+		049045D1180E3D89002322FA /* gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 049045CB180E3D89002322FA /* gray.png */; };
+		049045D2180E3D89002322FA /* gray.xcf in Resources */ = {isa = PBXBuildFile; fileRef = 049045CC180E3D89002322FA /* gray.xcf */; };
+		049045D3180E3D89002322FA /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 049045CD180E3D89002322FA /* orange.png */; };
+		049045D4180E3D89002322FA /* orange.xcf in Resources */ = {isa = PBXBuildFile; fileRef = 049045CE180E3D89002322FA /* orange.xcf */; };
+		049045D5180E3D89002322FA /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 049045CF180E3D89002322FA /* white.png */; };
+		049045D6180E3D89002322FA /* white.xcf in Resources */ = {isa = PBXBuildFile; fileRef = 049045D0180E3D89002322FA /* white.xcf */; };
+		049045D8180E408D002322FA /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 049045D7180E408D002322FA /* icon120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +82,8 @@
 		04093F8D18029EFD007ECC71 /* CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		04093F8F18029EFD007ECC71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04093F9118029EFD007ECC71 /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
-		040F1AD218050A0C00529130 /* gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gray.png; path = Calculator/images/gray.png; sourceTree = "<group>"; };
-		040F1AD318050A0C00529130 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orange.png; path = Calculator/images/orange.png; sourceTree = "<group>"; };
 		041A3DA7180BD8CB00505924 /* MathUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathUtil.h; sourceTree = "<group>"; };
 		041A3DA8180BD8CB00505924 /* MathUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathUtil.m; sourceTree = "<group>"; };
-		04904585180D9DEA002322FA /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = Calculator/images/white.png; sourceTree = "<group>"; };
 		04904588180E2EE9002322FA /* _DDFunctionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionContainer.h; sourceTree = "<group>"; };
 		04904589180E2EE9002322FA /* _DDFunctionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionContainer.m; sourceTree = "<group>"; };
 		0490458A180E2EE9002322FA /* _DDFunctionExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionExpression.h; sourceTree = "<group>"; };
@@ -128,6 +129,13 @@
 		049045B2180E2EE9002322FA /* DDTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTypes.m; sourceTree = "<group>"; };
 		049045B3180E2EE9002322FA /* NSString+DDMathParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDMathParsing.h"; sourceTree = "<group>"; };
 		049045B4180E2EE9002322FA /* NSString+DDMathParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDMathParsing.m"; sourceTree = "<group>"; };
+		049045CB180E3D89002322FA /* gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray.png; sourceTree = "<group>"; };
+		049045CC180E3D89002322FA /* gray.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gray.xcf; sourceTree = "<group>"; };
+		049045CD180E3D89002322FA /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		049045CE180E3D89002322FA /* orange.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = orange.xcf; sourceTree = "<group>"; };
+		049045CF180E3D89002322FA /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
+		049045D0180E3D89002322FA /* white.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = white.xcf; sourceTree = "<group>"; };
+		049045D7180E408D002322FA /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +165,7 @@
 		04093F5A18029EFD007ECC71 = {
 			isa = PBXGroup;
 			children = (
-				040F1AD218050A0C00529130 /* gray.png */,
-				040F1AD318050A0C00529130 /* orange.png */,
-				04904585180D9DEA002322FA /* white.png */,
+				049045CA180E3D89002322FA /* images */,
 				04093F6C18029EFD007ECC71 /* Calculator */,
 				04093F8B18029EFD007ECC71 /* CalculatorTests */,
 				04093F6518029EFD007ECC71 /* Frameworks */,
@@ -285,6 +291,20 @@
 			path = DDMathParser;
 			sourceTree = "<group>";
 		};
+		049045CA180E3D89002322FA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				049045D7180E408D002322FA /* icon120.png */,
+				049045CB180E3D89002322FA /* gray.png */,
+				049045CC180E3D89002322FA /* gray.xcf */,
+				049045CD180E3D89002322FA /* orange.png */,
+				049045CE180E3D89002322FA /* orange.xcf */,
+				049045CF180E3D89002322FA /* white.png */,
+				049045D0180E3D89002322FA /* white.xcf */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,10 +383,14 @@
 			files = (
 				04093F7F18029EFD007ECC71 /* Images.xcassets in Resources */,
 				04093F7118029EFD007ECC71 /* InfoPlist.strings in Resources */,
-				040F1AD418050A0C00529130 /* gray.png in Resources */,
-				040F1AD518050A0C00529130 /* orange.png in Resources */,
+				049045D6180E3D89002322FA /* white.xcf in Resources */,
+				049045D1180E3D89002322FA /* gray.png in Resources */,
 				04093F7A18029EFD007ECC71 /* Main.storyboard in Resources */,
-				04904586180D9DEA002322FA /* white.png in Resources */,
+				049045D4180E3D89002322FA /* orange.xcf in Resources */,
+				049045D8180E408D002322FA /* icon120.png in Resources */,
+				049045D5180E3D89002322FA /* white.png in Resources */,
+				049045D2180E3D89002322FA /* gray.xcf in Resources */,
+				049045D3180E3D89002322FA /* orange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
