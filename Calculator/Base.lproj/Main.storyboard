@@ -24,6 +24,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="normalCalculateSymbolButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7Kv-Io-qm8"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cg1-wC-S9f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5s-eC-UaS">
                                 <rect key="frame" x="517" y="116" width="50" height="50"/>
@@ -33,6 +37,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="normalCalculateSymbolButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="boL-3E-V0t"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hTM-z1-T2r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAU-MD-DYQ">
                                 <rect key="frame" x="517" y="167" width="50" height="50"/>
@@ -42,6 +50,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="normalCalculateSymbolButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tpw-Kb-9ZR"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="R8Y-KY-Jsh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-o7-4JU">
                                 <rect key="frame" x="517" y="218" width="50" height="50"/>
@@ -50,6 +62,10 @@
                                 <state key="normal" title="+" backgroundImage="orange.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="normalCalculateSymbolButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kiv-G3-uo6"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ao7-UA-bAx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vC-nn-nh1">
                                 <rect key="frame" x="517" y="269" width="50" height="50"/>
@@ -61,6 +77,7 @@
                                 </state>
                                 <connections>
                                     <action selector="equal:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JVX-ID-8gI"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yHG-sb-puR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RF-dL-ebw">
@@ -325,19 +342,27 @@
                                 <rect key="frame" x="154" y="269" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Rand" backgroundImage="gray.png">
+                                <state key="normal" title=")" backgroundImage="gray.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="normalCalculateSymbolButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sbJ-Cp-tmv"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="me0-wh-Shc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjt-PX-cvF">
                                 <rect key="frame" x="103" y="269" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="x!" backgroundImage="gray.png">
+                                <state key="normal" title="(" backgroundImage="gray.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="normalCalculateSymbolButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qCJ-78-WBW"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AQz-Fg-EDi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tx-hP-nkw">
                                 <rect key="frame" x="52" y="269" width="50" height="50"/>

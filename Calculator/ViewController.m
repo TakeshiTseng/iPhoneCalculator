@@ -15,7 +15,7 @@
 	NSMutableString* buf;
 	char cbuf[100];
 	DDMathEvaluator *evaluator;
-
+	BOOL resetFlag;
 	
 }
 
@@ -28,6 +28,7 @@
     [super viewDidLoad];
 	buf = [NSMutableString stringWithString:@"0"];
 	evaluator = [[DDMathEvaluator alloc] init];
+	resetFlag = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,8 +41,9 @@
 - (IBAction)numberButtonPress:(id)sender{
 	UIButton* button = (UIButton*)sender;
 	NSString* numText = [button currentTitle];
-	if([buf isEqualToString:@"0"]){
+	if(resetFlag){
 		[buf setString:numText];
+		resetFlag = NO;
 	} else {
 		[buf appendString:numText];
 	}
@@ -50,6 +52,7 @@
 }
 - (IBAction)allClear:(id)sende{
 	[buf setString:@"0"];
+	resetFlag = YES;
 }
 - (IBAction)setNeg:(id)sender{
 	if([MathUtil isNagtive:buf]){
@@ -60,6 +63,7 @@
 }
 - (IBAction)equal:(id)sender{
 	[self calculate];
+	resetFlag = YES;
 }
 - (IBAction)persent:(id)sender{
 	// must calculate first!
@@ -78,8 +82,10 @@
 }
 
 - (void)calculate{
+	NSString* expressionString = [numPane text];
+	NSLog(@"Exp : %@", expressionString);
 	NSError *error = nil;
-	DDMathStringTokenizer *tokenizer = [[DDMathStringTokenizer alloc] initWithString:buf error:&error];
+	DDMathStringTokenizer *tokenizer = [[DDMathStringTokenizer alloc] initWithString:expressionString error:&error];
 	DDParser *parser = [DDParser parserWithTokenizer:tokenizer error:&error];
 	
 	DDExpression *expression = [parser parsedExpressionWithError:&error];
@@ -87,11 +93,32 @@
 	
 	NSNumber *value = [rewritten evaluateWithSubstitutions:nil evaluator:evaluator error:&error];
 	DD_RELEASE(tokenizer);
-	
-	[buf setString:[value description]];
+	if(value == nil){
+		[buf setString:@"Error!"];
+		NSLog(@"Error : %@", [error description]);
+	} else {
+		[buf setString:[value description]];
+	}
+
 }
 
 - (IBAction)normalCalculateSymbolButtonPress:(id)sender{
-	
+	UIButton* button = (UIButton*)sender;
+	NSString* text = [button currentTitle];
+	if([text isEqualToString:@"÷"]){
+		text = @"/";
+	}
+	if([text isEqualToString:@"x"]){
+		text = @"*";
+	}
+	if([text isEqualToString:@"–"]){
+		text = @"-";
+	}
+	if([text isEqualToString:@"("] && resetFlag){
+		text = @"";
+		[buf setString:@"("];
+	}
+	[buf appendString:text];
+	resetFlag = NO;
 }
 @end
