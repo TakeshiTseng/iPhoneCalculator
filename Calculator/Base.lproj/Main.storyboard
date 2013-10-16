@@ -560,6 +560,9 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -573,48 +576,12 @@
     </scenes>
     <resources>
         <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
-        <image name="gray.png" width="80" height="80"/>
         <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="orange.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
-        <image name="white.png" width="80" height="80"/>
         <image name="white.png" width="80" height="80"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
