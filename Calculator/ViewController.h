@@ -19,4 +19,6 @@
 - (IBAction)allClear:(id)sender;
 - (IBAction)persent:(id)sender;
 - (IBAction)updateNumLabel:(id)sender;
+- (IBAction)dot:(id)sender;
+- (IBAction)normalCalculateSymbolButtonPress:(id)sender;
 @end

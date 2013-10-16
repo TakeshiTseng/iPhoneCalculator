@@ -19,4 +19,8 @@
 +(BOOL)isNagtive:(NSString *)text{
 	return 	[text hasPrefix:@"-"];
 }
++(NSString*)calculateRegarded:(NSString*)regarded{
+	
+	return @"";
+}
 @end

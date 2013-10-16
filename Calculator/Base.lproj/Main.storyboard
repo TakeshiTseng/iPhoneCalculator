@@ -71,6 +71,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="dot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fpk-Sa-9cS"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YsN-is-dWx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7R-h7-0Ff">
                                 <rect key="frame" x="20" y="13" width="528" height="39"/>
@@ -363,6 +367,7 @@
                                 </state>
                                 <connections>
                                     <action selector="persent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t6s-9p-2V8"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gv2-N8-js7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUz-eu-sQG">
@@ -375,6 +380,7 @@
                                 </state>
                                 <connections>
                                     <action selector="setNeg:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rnd-9R-dbf"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="I85-9w-SZH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV2-bW-dmw">
@@ -387,6 +393,7 @@
                                 </state>
                                 <connections>
                                     <action selector="allClear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="k1l-tD-Zw6"/>
+                                    <action selector="updateNumLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lMn-Gf-ZhT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVQ-wU-knW">
