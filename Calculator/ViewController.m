@@ -121,4 +121,9 @@
 	[buf appendString:text];
 	resetFlag = NO;
 }
+
+- (IBAction)memoryButtonPress:(id)sender{
+	
+}
+
 @end

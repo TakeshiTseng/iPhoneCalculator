@@ -21,4 +21,6 @@
 - (IBAction)updateNumLabel:(id)sender;
 - (IBAction)dot:(id)sender;
 - (IBAction)normalCalculateSymbolButtonPress:(id)sender;
+- (IBAction)memoryButtonPress:(id)sender;
+- (IBAction)specialButtonPress:(id)sender;
 @end
