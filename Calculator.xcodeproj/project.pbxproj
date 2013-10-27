@@ -52,6 +52,7 @@
 		049045D8180E408D002322FA /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 049045D7180E408D002322FA /* icon120.png */; };
 		049045DB180E4287002322FA /* Portrait2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 049045D9180E4287002322FA /* Portrait2X.png */; };
 		049045DC180E4287002322FA /* Portrait4X.png in Resources */ = {isa = PBXBuildFile; fileRef = 049045DA180E4287002322FA /* Portrait4X.png */; };
+		04CC7089181D73C400361A75 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CC7088181D73C400361A75 /* back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		049045D7180E408D002322FA /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 		049045D9180E4287002322FA /* Portrait2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Portrait2X.png; sourceTree = "<group>"; };
 		049045DA180E4287002322FA /* Portrait4X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Portrait4X.png; sourceTree = "<group>"; };
+		04CC7088181D73C400361A75 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 		049045CA180E3D89002322FA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				04CC7088181D73C400361A75 /* back.png */,
 				049045D9180E4287002322FA /* Portrait2X.png */,
 				049045DA180E4287002322FA /* Portrait4X.png */,
 				049045D7180E408D002322FA /* icon120.png */,
@@ -393,6 +396,7 @@
 				049045D6180E3D89002322FA /* white.xcf in Resources */,
 				049045D1180E3D89002322FA /* gray.png in Resources */,
 				04093F7A18029EFD007ECC71 /* Main.storyboard in Resources */,
+				04CC7089181D73C400361A75 /* back.png in Resources */,
 				049045D4180E3D89002322FA /* orange.xcf in Resources */,
 				049045D8180E408D002322FA /* icon120.png in Resources */,
 				049045D5180E3D89002322FA /* white.png in Resources */,

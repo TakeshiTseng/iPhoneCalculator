@@ -144,6 +144,7 @@
 		memoryNumber = 0;
 	} else if([title isEqualToString:@"mr"]){
 		[buf setString:[NSString stringWithFormat:@"%f", memoryNumber]];
+		resetFlag = YES;
 	} else if([title isEqualToString:@"m+"]){
 		[self calculate];
 		memoryNumber += currentNumber;
@@ -210,8 +211,14 @@
 }
 
 - (IBAction)backSpace:(id)sender{
-	NSString* tmpString = [buf substringToIndex:[buf length]-1];
-	[buf setString:tmpString];
+	if([buf length] > 1){
+		NSString* tmpString = [buf substringToIndex:[buf length]-1];
+		[buf setString:tmpString];
+	} else if([buf length] == 1){
+		[buf setString:@"0"];
+		resetFlag = YES;
+	}
+
 }
 
 @end
