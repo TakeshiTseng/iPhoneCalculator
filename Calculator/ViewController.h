@@ -23,4 +23,5 @@
 - (IBAction)normalCalculateSymbolButtonPress:(id)sender;
 - (IBAction)memoryButtonPress:(id)sender;
 - (IBAction)specialButtonPress:(id)sender;
+- (IBAction)backSpace:(id)sender;
 @end
